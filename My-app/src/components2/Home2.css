@@ -1,0 +1,31 @@
+.for-Selling {
+
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    height: 350px;
+    max-width: 316px;
+    max-height: 150px;
+    display: flex;
+}
+
+.Image-for-regisration {
+    width: 100%;
+    margin-right: 18px;
+    margin-top: 18px;
+    max-width: 276px;
+    max-height: 117px;
+
+}
+
+.text-for-register {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h6 {
+    cursor: pointer;
+    margin-top: -20px;
+}

@@ -1,0 +1,38 @@
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  list-style-type: none;
+  margin: 6px -3px;
+  padding: 0px;
+  border: 4px solid white;
+  border-radius: 7px;
+}
+
+.menu>li {
+  margin: 0;
+
+  background-color: #ffffff;
+}
+
+.menu>li:hover {
+  background-color: lightgray;
+}
+
+.menu>li>button {
+  width: 100%;
+  /* height: 100%; */
+  text-align: left;
+
+
+  background: black;
+
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.order_confirm {
+    background-color: whitesmoke;
+    width: 600px;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.order_confirm h3 {
+    background-color: black;
+    color: #fff;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.order_confirm h2 {
+    text-align: center;
+}
+
+.order_confirm h4 {
+    text-align: center;
+}
+
+.order_confirm h1 {
+    text-align: center;
+}
+
+.order_confirm button {
+    background: #f0c14b;
+    border-radius: 2px;
+    margin-left: 245px;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    cursor: pointer;
+}
