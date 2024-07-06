@@ -50,5 +50,5 @@ npm run start
 ## 📸 Screenshots
 
 <img src='./My-app/src/Image/Screenshot1.png'/>
-<img src='./My-app/src/Image/Screenshot1.png'/>
+<img src='./My-app/src/Image/Screenshot2.png'/>
 
