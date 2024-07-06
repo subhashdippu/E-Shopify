@@ -1,0 +1,46 @@
+.Contain {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    height: 350px;
+    max-width: 300px;
+    max-height: 420px;
+    flex-direction: column;
+}
+
+
+.Rating {
+    display: flex;
+    margin-left: 14px;
+}
+
+
+.imga {
+    max-height: 200px;
+    max-width: 200px;
+    /* align-self: start;
+    align-items: center; */
+    /* max-height: 200px; */
+    margin: 14px;
+    /* object-fit: contain; */
+    /* margin-top: -1px; */
+    margin-left: 48px;
+    /* margin-left: 10px; */
+    /* max-width: 200px; */
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.CartButton {
+    /* width: 98px;
+    height: 89px; */
+    margin-left: 100px;
+    margin-top: 10px;
+    display: flex;
+    background-color: #f0c14b;
+    border: 3px solid #a88734;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: -6px;
+    margin-top: 10px;
+}
