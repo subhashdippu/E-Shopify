@@ -2,19 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import { db } from './firebase'
 import '../Css/Product.css'
-const Product = ({ title, price, rating, image, id }) => { // {title, ...} it just open the box of props 
-    // console.log(props)
-    const addToCart = () => { // This is going to add data into the database
+const Product = ({ title, price, rating, image, id }) => {
+    const addToCart = () => {
         const cartItem = db.collection('cartItems').doc(id);
         cartItem.get()
             .then((doc) => {
                 console.log(doc);
-                if (doc.exists) { // It will update the quantity if the product is alread in cart
+                if (doc.exists) {
                     cartItem.update({
                         quantity: doc.data().quantity + 1
                     })
                 }
-                else {// It will add the product in cart or in database is data is not available
+                else {
                     db.collection("cartItems").doc(id).set({
                         name: title,
                         image: image,

@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom';
 import Image from '../ImageAndVedio/E-Shopify.png'
 import '../Components/Dropdown.css'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 
 function Header({ cartItems, user, signOut }) {
@@ -23,9 +23,6 @@ function Header({ cartItems, user, signOut }) {
         return count;
     }
 
-
-    const [userData, setUserData] = useState('')
-    const [show, setShow] = useState(false)
     const callAboutPage = async () => {
         try {
             const res = await fetch('/about', {
@@ -36,12 +33,8 @@ function Header({ cartItems, user, signOut }) {
                 },
 
             })
-
             const data = await res.json()
             console.log(data)
-            setUserData(data)
-            setShow(true)
-
         } catch (err) {
             console.log(err)
 
@@ -198,33 +191,6 @@ const CartCount = styled.div`
 const Second = styled.div`
     background-image: none;
     background-color: #232f3e;
-`
-const Arrow = styled.select`
-    border: none;
-    outline: none;
-`
-const Language = styled.div`
-    img{
-        max-width:20px;
-        margin-left: 21px;
-        // margin-right:15px;
-        margin-top:20px;
-    }
-    display:flex;
-`
-const Lan = styled.select`
-    border: none;
-    outline: none;
-    background-color: #0F1111;
-    max-width:40px;
-    margin-top:20px;
-    // margin-bottom:2px;
-    font-weight: 700; 
-`
-const Sing = styled.select`
-    border: none;
-    outline: none;
-    background-color: #0F1111;
 `
 
 const SignOption = styled.div`

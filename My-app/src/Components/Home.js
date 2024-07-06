@@ -12,7 +12,6 @@ import 'swiper/css/navigation';
 
 import '../Css/styles.css'
 
-// import required modules
 import { Navigation } from 'swiper/modules';
 
 
@@ -30,17 +29,10 @@ function Home({ signIn, signOut }) {
             setProducts(tempProduct);
         })
     }
-    useEffect(() => { // it will run when the page rander first  time
+    useEffect(() => {
         console.log("Call products");
         getProducts()
     }, [])
-
-
-
-
-
-
-
 
     return (
         <Container className='ContainerPart1'>

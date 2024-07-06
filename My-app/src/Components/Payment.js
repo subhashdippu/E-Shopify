@@ -1,7 +1,5 @@
-// import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import CartItem from './CartItem'
 import React, { useState, useEffect } from 'react'
 
 
@@ -50,11 +48,6 @@ function Payment({ cartItems }) {
               <p>6556gucds</p>
               <p>Khan Pur</p>
               <h1>{userData.messages}</h1>
-              {/* {userData.messages.name} */}
-
-              {/* <h1>{userData.name}</h1>
-              // <h1>{userData.email}</h1>
-              <h1>{userData.messages}</h1> */}
               <p>New delhi</p>
               <p>Pandchvati</p>
               <p>Delhi</p>
@@ -66,15 +59,10 @@ function Payment({ cartItems }) {
 
             <div>
               <p>Card Details</p>
-
-              {/* Card Element */}
-
-
             </div>
           </PaymentContainer>
 
           <OrderContainer>
-            {/* <CartItem /> */}
             <h5>Your Order</h5>
           </OrderContainer>
         </ReviewContainer>
@@ -191,4 +179,3 @@ const Subtotal = styled.div`
     border-radius: 8px;
   }
 `
-const ItemsContainer = styled.div``

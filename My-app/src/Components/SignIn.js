@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import { NavLink, useHistory, Link } from 'react-router-dom'
 import '../Css/SignIn.css'
 import Image from '../ImageAndVedio/E-Shopify.png'
@@ -26,16 +26,16 @@ const SignIn = () => {
         else {
             window.alert("Login Succeful")
             history.push("/")
-            refresh() // this is for refreshing the page
+            refresh()
         }
     }
-    // 
     return (
         <div className="login">
             <Link to="/">
                 <img
                     className="login_logo"
                     src={Image}
+                    alt='logo'
                 />
             </Link>
 

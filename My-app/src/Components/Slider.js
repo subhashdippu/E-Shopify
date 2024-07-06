@@ -1,17 +1,14 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image2 from './ImageAndVedio/Image2.jpg'
 import Image3 from './ImageAndVedio/Image3.jpg'
 import Image1 from './ImageAndVedio/Image1.jpg'
 import Image from './ImageAndVedio/Image5.jpg'
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import './styles.css'
 
-// import required modules
 import { Navigation } from 'swiper/modules';
 
 export default function App() {

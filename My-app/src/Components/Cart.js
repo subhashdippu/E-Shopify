@@ -14,9 +14,7 @@ function Cart({ cartItems }) {
 
     const getCount = () => {
         let count = 0;
-        // Loop through all cart items
         cartItems.forEach((item) => {
-            // add the quantity of the cart item to tota;
             count += item.product.quantity;
         })
 
@@ -37,4 +35,3 @@ const Container = styled.div`
     padding: 14px 18px 0 18px;
     align-items; flex-start; // Take the only needed space
 `
-const CartItem = styled.div``

@@ -17,7 +17,7 @@ function Ac() {
             setProducts(tempProduct);
         })
     }
-    useEffect(() => { // it will run when the page rander first  time
+    useEffect(() => {
         console.log("Call products");
         getProducts()
     }, [])

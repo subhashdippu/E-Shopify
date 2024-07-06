@@ -40,10 +40,6 @@ const userSchema = new mongoose.Schema({
                 type: String,
 
             },
-            // email: {
-            //     type: String,
-            //     required: true
-            // },
             phone: {
                 type: Number,
 
@@ -62,7 +58,7 @@ const userSchema = new mongoose.Schema({
             }
         }
     ],
-    tokens: [// Here use array because you will log in multiple time and the token will generate every time
+    tokens: [
         {
             token: {
                 type: String,
@@ -73,19 +69,19 @@ const userSchema = new mongoose.Schema({
 })
 
 
-userSchema.pre('save', async function (next) { //Here we use next for middleware
+userSchema.pre('save', async function (next) {
     console.log("This bcrypt")
-    if (this.isModified('password')) {// when the password is change then run this or hash
-        this.password = await bcrypt.hash(this.password, 12); //This is the method of hashing password
+    if (this.isModified('password')) {
+        this.password = await bcrypt.hash(this.password, 12);
         this.cpassword = await bcrypt.hash(this.cpassword, 12);
     }
     next();
 })
-userSchema.methods.generateAuthToken = async function () {// Here userSchema ke ander methods hai aur method ke ander generateAuthtoken hai we should use try with fuction
+userSchema.methods.generateAuthToken = async function () {
     try {
-        let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY); // It will generate the token run for the email 
-        this.tokens = this.tokens.concat({ token: token });// this is use for reffering the object, concat is use for concatinate the token for token in schema. Here first token is from schema and second token is generated token 
-        await this.save(); //It will save the data in database
+        let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
+        this.tokens = this.tokens.concat({ token: token });
+        await this.save();
         return token;
     } catch (err) {
         console.log(err);
@@ -102,4 +98,4 @@ userSchema.methods.addMessage = async function (name, phone, Area, flat, LandMar
 }
 const User = mongoose.model('USER', userSchema)
 
-module.exports = User; // we can call from other place 
+module.exports = User;

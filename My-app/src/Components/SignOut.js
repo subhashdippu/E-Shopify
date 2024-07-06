@@ -1,7 +1,7 @@
 
 
 import React, { useEffect } from 'react'
-import { NavLink, useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 const refresh = () => window.location.reload(true)
 const SignOut = () => {
     const history = useHistory();

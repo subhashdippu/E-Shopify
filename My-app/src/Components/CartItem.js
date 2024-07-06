@@ -4,7 +4,7 @@ import { db } from './firebase'
 
 const CartItem = ({ id, item }) => {
 
-    const deleteItem = (e) => {// Delete the item in database means from cart
+    const deleteItem = (e) => {
         e.preventDefault()
         db.collection('cartItems').doc(id).delete();
     }
@@ -14,7 +14,7 @@ const CartItem = ({ id, item }) => {
     for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
         options.push(<option value={i}> Qty: {i}</option>)
     }
-    const changeQuntity = (newQuantity) => {// It will change the database of Quantity
+    const changeQuntity = (newQuantity) => {
         db.collection('cartItems').doc(id).update({
             quantity: parseInt(newQuantity)
         })
@@ -22,7 +22,7 @@ const CartItem = ({ id, item }) => {
     return (
         <Container>
             <ImageContainer>
-                <img src={item.image} />
+                <img src={item.image} alt='' />
             </ImageContainer>
 
             <CartItemInfo>
@@ -32,7 +32,7 @@ const CartItem = ({ id, item }) => {
                 <CartItemInfoBottom>
                     <CartItemQntity>
                         <select
-                            value={item.quantity} // It will check the database and set the quantity
+                            value={item.quantity}
                             onChange={(e) => changeQuntity(e.target.value)}
                         >
                             {options}

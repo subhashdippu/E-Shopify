@@ -5,23 +5,15 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom';
 import Image from '../ImageAndVedio/E-Shopify.png'
-import React, { NavLink, useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
 import '../Components/Dropdown.css'
 
-function Header({ cartItems, user, signOut }) {
-    const history = useHistory()
+function Header({ cartItems }) {
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
         setOpen(!open);
     };
-
-
-    // const handleClick = () => {
-    //     // Now you can navigate programmatically to other pages using navigate
-    //     history.push("/")
-    // };
     const getCount = () => {
         let count = 0;
         cartItems.forEach((item) => {
@@ -31,7 +23,6 @@ function Header({ cartItems, user, signOut }) {
     }
 
     const [userData, setUserData] = useState('')
-    const [show, setShow] = useState(false)
     const callAboutPage = async () => {
         try {
             const res = await fetch('/about', {
@@ -45,7 +36,6 @@ function Header({ cartItems, user, signOut }) {
 
             const data = await res.json()
             console.log(data)
-            setShow(true)
             setUserData(data)
 
         } catch (err) {
@@ -86,7 +76,7 @@ function Header({ cartItems, user, signOut }) {
                                 {open ? (
                                     <ul className="menu">
                                         <li className="menu-item">
-                                            {/* <NavLink to="/registration" className='imge-link'>Create an Account</NavLink> */}
+
                                             <Link to="signout">
                                                 <h3>SignOut</h3>
                                             </Link>
@@ -95,7 +85,7 @@ function Header({ cartItems, user, signOut }) {
                                             <Link to="/">
                                                 <h3>ContactUs</h3>
                                             </Link>
-                                            {/* <button onClick={() => navigate("/signout")}>About</button> */}
+
                                         </li>
                                     </ul>
                                 ) : null}
@@ -208,33 +198,6 @@ const CartCount = styled.div`
 const Second = styled.div`
     background-image: none;
     background-color: #232f3e;
-`
-const Arrow = styled.select`
-    border: none;
-    outline: none;
-`
-const Language = styled.div`
-    img{
-        max-width:20px;
-        margin-left: 21px;
-        // margin-right:15px;
-        margin-top:20px;
-    }
-    display:flex;
-`
-const Lan = styled.select`
-    border: none;
-    outline: none;
-    background-color: #0F1111;
-    max-width:40px;
-    margin-top:20px;
-    // margin-bottom:2px;
-    font-weight: 700; 
-`
-const Sing = styled.select`
-    border: none;
-    outline: none;
-    background-color: #0F1111;
 `
 
 const SignOption = styled.div`

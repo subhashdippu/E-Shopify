@@ -44,6 +44,7 @@ const Registration = () => {
                 <img
                     className="login_logo"
                     src={Image}
+                    alt='logo'
                 />
             </Link>
             <div className="login_container">

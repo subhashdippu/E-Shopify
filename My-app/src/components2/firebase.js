@@ -12,11 +12,8 @@ const firebaseApp = firebase.initializeApp({
     measurementId: "G-JMRHWYM5HQ"
 });
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
-// const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider()
 
 export { auth, db, provider };

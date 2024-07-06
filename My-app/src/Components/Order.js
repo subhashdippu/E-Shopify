@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Image from '../ImageAndVedio/E-Shopify.png'
-import { NavLink, useHistory, Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import '../Css/Registration.css'
 const Order = () => {
 
@@ -66,7 +66,6 @@ const Order = () => {
         const value = e.target.value;
         setUserData({ ...userData, [name]: value })
     }
-    const { name, email, phone, Area, flat, LandMark, Town, State } = userData
     useEffect(() => {
         window.localStorage.setItem("data", JSON.stringify(userData));
     }, [userData])
