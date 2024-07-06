@@ -49,14 +49,6 @@ npm run start
 
 ## 📸 Screenshots
 
-<h4>Home</h4>
-<img src='./FastFeast/Readme/Home.png'/>
-<!-- <img src='./FastFeast/Readme/Screenshot_1.png'/>
-<img src='./FastFeast/Readme/Screenshot_2.png'/> -->
-<h4>Sign In</h4>
-<img src='./FastFeast/Readme/SignIn.png'/>
-<h4>Cart</h4>
-<img src='./FastFeast/Readme/Cart.png'/>
-<h4>Admin Page</h4>
-<img src='./FastFeast/Readme/Admin Page.png'/>
+<img src='./My-app/src/Image/Screenshot1.png'/>
+<img src='./My-app/src/Image/Screenshot1.png'/>
 
