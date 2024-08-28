@@ -15,9 +15,12 @@ This repository is about a responsive e-commerce MERN stack web app that allows 
 ## 👨‍💻 Tech Stack Used
 
 ### Frontend
- - ReactJS, TailwindCSS, Material UI, JavaScript, React-icons
+
+- ReactJS, TailwindCSS, Material UI, JavaScript, React-icons
+
 ### Backend
- - Node.js, Express.js, JWT, MongoDB, Firebase
+
+- Node.js, Express.js, JWT, MongoDB, Firebase
 
 ## 🛠️ Installation Steps
 
@@ -51,4 +54,7 @@ npm run start
 
 <img src='./My-app/src/Image/Screenshot1.png'/>
 <img src='./My-app/src/Image/Screenshot2.png'/>
-
+<img src='./My-app/src/Image/Screenshot3.png'/>
+<img src='./My-app/src/Image/Screenshot4.png'/>
+<img src='./My-app/src/Image/Screenshot5.png'/>
+<img src='./My-app/src/Image/Screenshot6.png'/>
